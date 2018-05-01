@@ -1,7 +1,7 @@
 import pandas as pd
 from bokeh.plotting import figure, show, curdoc
 from bokeh.layouts import widgetbox, layout, row, column
-from bokeh.models import ColumnDataSource, Button, Slider, Dropdown, PreText, DataTable, TableColumn, MultiSelect, NumberFormatter
+from bokeh.models import ColumnDataSource, Button, Slider, Dropdown, PreText, DataTable, TableColumn, MultiSelect, NumberFormatter, CustomJS
 from collections import OrderedDict, Counter
 import numpy as np
 
