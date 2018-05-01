@@ -1,1 +1,1 @@
-web: bokeh serve --port $PORT --host iex-streaming.herokuapp.com --address=0.0.0.0 --use-xheaders main.py
+web: bokeh serve --port $PORT --host mcdm.streaming.herokuapp.com --address=0.0.0.0 --use-xheaders main.pyit 
