@@ -27,7 +27,7 @@ for cp in cb_palette:
 df = pd.read_excel("app/data/Rubric.xlsx", "Rubric v3")
 df = df[["Criteria", "Atlas.ti", "Dedoose", "MAXQDA", "NVivo", "Transana", "TOM", "QDA Miner"]]
 
-definitions = pd.read_excel("/home/matt/GitRepos/systems/data/Rubric.xlsx", "Definitions")
+definitions = pd.read_excel("app/data/Rubric.xlsx", "Definitions")
 
 definitions["Definition"].fillna("", inplace=True)
 
