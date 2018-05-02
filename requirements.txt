@@ -9,4 +9,3 @@ PyYAML==3.12
 seaborn==0.8.1
 tornado==5.0
 requests==2.18.4
-tk==8.5.18

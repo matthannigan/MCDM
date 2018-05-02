@@ -1,3 +1,5 @@
+import matplotlib
+matplotlib.use('Agg')
 from bokeh.models.widgets import Panel, Tabs
 from bokeh.io import show, curdoc
 from bokeh.layouts import layout
