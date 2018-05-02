@@ -1,6 +1,7 @@
 [requires]
 python_full_version = "3.6.4"
 
+[packages]
 alabaster==0.7.10
 anaconda-client==1.6.14
 asn1crypto==0.24.0
