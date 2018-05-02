@@ -32,7 +32,7 @@ class MCDMModel:
 
         self.criteria = self.rubric["Criteria"].drop_duplicates().tolist()
 
-        self.swing_table = swing_table.p
+        self.swing_table = swing_table.create_swing_table()
 
         self.chosen_criteria = []
 
@@ -77,6 +77,8 @@ class MCDMModel:
 
             self.ranking = OrderedDict()
             self.rank_criteria()
+
+            self.swing_table = swing_table.create_swing_table(self.chosen_criteria)
 
             try:
                 self.app_layout.children.pop(1)
