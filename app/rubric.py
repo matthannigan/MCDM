@@ -2,7 +2,9 @@ import pandas as pd
 import seaborn
 from bokeh.plotting import figure, show
 from bokeh.models import ColumnDataSource, FactorRange, Legend, HoverTool
+import os
 
+file_path = os.path.dirname(os.path.abspath(__file__))
 
 palette = seaborn.color_palette("RdYlGn").as_hex()
 palette = [palette[0], palette[round(len(palette)/2)], palette[-1]]
@@ -22,7 +24,7 @@ for cp in cb_palette:
     cb_color_map.update({cb_colors[cb_palette.index(cp)]: cp})
 
 
-df = pd.read_excel("/home/matt/GitRepos/systems/data/Rubric.xlsx", "Rubric v3")
+df = pd.read_excel(os.path.join(file_path, "data/Rubric.xlsx"), "Rubric v3")
 df = df[["Criteria", "Atlas.ti", "Dedoose", "MAXQDA", "NVivo", "Transana", "TOM", "QDA Miner"]]
 
 definitions = pd.read_excel("/home/matt/GitRepos/systems/data/Rubric.xlsx", "Definitions")
