@@ -19,13 +19,11 @@ for cp in cb_palette:
     cb_color_map.update({cb_colors[cb_palette.index(cp)]: cp})
 
 
-definitions = pd.read_excel(os.path.join(file_path, "data/Rubric.xlsx"), "Definitions")
+definitions = pd.read_excel("app/data/Rubric.xlsx" "Definitions")
 
 definitions["Definition"] = definitions["Criteria"].str.cat(definitions["Definition"], sep=" - ")
 
 definitions["Definition"] = definitions["Definition"].str.replace("\n", "<br>")
-
-print(definitions["Definition"])
 
 criteria = definitions["Criteria"].drop_duplicates().tolist()
 
