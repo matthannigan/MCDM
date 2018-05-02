@@ -74,6 +74,26 @@ def create_swing_table(filter_col=None):
 
         df_ex_poor = df_ex_poor.loc[df_ex_poor.x.isin(filter_col)]
 
+        grouped_df = df_ex_poor.groupby("scenario", as_index=True)
+
+        scenarios = []
+
+        for g in grouped_df.groups:
+
+            if "Excellent" in grouped_df.get_group(g)["Score"].tolist():
+
+                scenarios.extend(grouped_df.get_group(g)["scenario"].tolist())
+
+        df_ex_poor = df_ex_poor.loc[df_ex_poor.scenario.isin(scenarios)]
+
+        plot_wid = 200*len(df_ex_poor["x"].drop_duplicates().tolist())
+        plot_h = 100 * len(df_ex_poor["y"].drop_duplicates().tolist())
+
+    else:
+
+        plot_wid = 1700
+        plot_h = 900
+
     y_range = FactorRange(factors=df_ex_poor["scenario"].drop_duplicates().tolist()[::-1])
     x_range = FactorRange(factors=df_ex_poor["x"].drop_duplicates().sort_values().tolist())
 
@@ -96,7 +116,7 @@ def create_swing_table(filter_col=None):
 
     hover = HoverTool(tooltips=[("Definition", "@definition_col")])
 
-    p = figure(y_range=y_range, x_range=x_range, plot_width=1700, plot_height=900, x_axis_location="above", tools=[hover, "save"])
+    p = figure(y_range=y_range, x_range=x_range, plot_width=plot_wid, plot_height=plot_h, x_axis_location="above", tools=[hover, "save"])
 
     excellent = p.rect(x="x", y="y", color="cb_color", source=excellent_source, height=.90, width=.98)
     poor = p.rect(x="x", y="y", color="cb_color", source=poor_source, height=.90, width=.98)
@@ -112,3 +132,7 @@ def create_swing_table(filter_col=None):
     p.add_layout(legend, 'right')
 
     return p
+
+if __name__ == '__main__':
+
+    create_swing_table(filter_col=["Affinity Diagramming", "Querying"])
