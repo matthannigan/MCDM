@@ -24,7 +24,7 @@ for cp in cb_palette:
     cb_color_map.update({cb_colors[cb_palette.index(cp)]: cp})
 
 
-df = pd.read_excel(os.path.join(file_path, "data/Rubric.xlsx"), "Rubric v3")
+df = pd.read_excel("app/data/Rubric.xlsx", "Rubric v3")
 df = df[["Criteria", "Atlas.ti", "Dedoose", "MAXQDA", "NVivo", "Transana", "TOM", "QDA Miner"]]
 
 definitions = pd.read_excel("/home/matt/GitRepos/systems/data/Rubric.xlsx", "Definitions")
