@@ -1,6 +1,7 @@
 asn1crypto==0.24.0
 attrs==17.4.0
 bokeh==12.10
+pandas==0.22
 boto==2.48.0
 bz2file==0.98
 certifi==2018.1.18
