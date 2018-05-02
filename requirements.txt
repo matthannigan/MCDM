@@ -28,3 +28,8 @@ selenium==3.8.1
 six==1.11.0
 smart-open==1.5.3
 urllib3==1.22
+six >=1.5.2',
+requests >=1.2.3,
+python-dateutil >=2.1
+Jinja2 >=2.7
+tornado >=4.3
