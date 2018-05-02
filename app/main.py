@@ -11,6 +11,8 @@ import instructions
 
 doc = curdoc()
 
+doc.title = "Decision Making Model"
+
 rubric = rubric.p
 mcdm = interactive_mcdm.app_layout
 features = features_checklist.p
