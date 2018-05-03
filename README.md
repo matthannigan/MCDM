@@ -7,15 +7,25 @@
 python >= 3.5
 
 bokeh==0.12.15
+
 Jinja2==2.10
+
 MarkupSafe==1.0
+
 matplotlib==2.2.2
+
 numpy==1.14.1
+
 pandas==0.22.0
+
 PyYAML==3.12
+
 seaborn==0.8.1
+
 tornado==5.0
+
 requests==2.18.4
+
 xlrd >= 0.9.0
 
 
