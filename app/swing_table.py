@@ -26,7 +26,7 @@ def create_swing_table(filter_col=None):
     definitions = pd.read_excel(os.path.join(file_path, "data/Rubric.xlsx"), "Definitions")
 
     definitions["Definition"] = definitions["Definition"].str.replace("^\w+:\s+", "")
-    # definitions["Definition"] = definitions["Definition"].str.replace("\n", "<br>")
+    definitions["Definition"] = definitions["Definition"].str.replace("\n", " <br> ")
 
     criteria = definitions["Criteria"].sort_values().drop_duplicates().tolist()
 
@@ -70,7 +70,7 @@ def create_swing_table(filter_col=None):
 
     df_ex_poor = df_ex_poor.merge(definitions[["Criteria", "scenario"]].drop_duplicates(), left_on="y", right_on="Criteria", how="left")
 
-    if filter_col:
+    if filter_col and len(filter_col) != len(criteria):
 
         df_ex_poor = df_ex_poor.loc[df_ex_poor.x.isin(filter_col)]
 
@@ -121,8 +121,8 @@ def create_swing_table(filter_col=None):
     excellent = p.rect(x="x", y="y", color="cb_color", source=excellent_source, height=.90, width=.98)
     poor = p.rect(x="x", y="y", color="cb_color", source=poor_source, height=.90, width=.98)
 
-    legend = Legend(items=[("Excellent", [excellent]),
-                           ("Poor", [poor])])
+    legend = Legend(items=[("Best", [excellent]),
+                           ("Worst", [poor])])
 
     p.xgrid.grid_line_color = None
     p.ygrid.grid_line_color = None
