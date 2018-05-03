@@ -1,4 +1,7 @@
-#Multicriteria Decision Making Model
+# Multicriteria Decision Making Model
+
+Created to help aid selection of Qualitative Data Analysis (QDA) software as part of a graduate student project at [Carnegie Mellon University](https://www.cmu.edu/)'s [Heinz College](https://www.heinz.cmu.edu/) by Matt Jannetti with teammates Beverly Bendix, Mengyu Chen, Elisha Desmangles, Emily Rosen & Xi Wang.
+
 
 ## Installation
 
@@ -17,7 +20,7 @@ seaborn >= 0.8.1
 
 ### Instructions
 
-####Recommended
+#### Recommended
 
 Download anaconda from: https://www.anaconda.com/download/
 
@@ -25,7 +28,7 @@ Run the installer
 
 Clone/download repository
 
-####Advanced install
+#### Advanced install
 
 Download python from: https://www.python.org/downloads/
 
