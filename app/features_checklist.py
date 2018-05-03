@@ -59,7 +59,7 @@ hover = HoverTool(tooltips=[("Tool", "@tool"),
 p = figure(x_range=x_range, y_range=y_range, plot_height=7500, plot_width=1500, x_axis_location="above", tools=[hover])
 
 
-p.circle(x="tool", y="feature", color="black", source=source, size=35)
+p.circle(x="tool", y="feature", color="black", source=source, size=28)
 
 p.add_layout(CategoricalAxis(), 'below')
 

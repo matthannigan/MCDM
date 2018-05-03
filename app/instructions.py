@@ -27,10 +27,10 @@ p3 = Paragraph(text="The features checklist shows a detailed list of the feature
                     "Again, hover over the dots to see the feature definition.", width=p_width,
                style={"font-size": "{}pt".format(p_font_size)})
 
-h3 = Paragraph(text="Features Checklist", width=p_width, style={"font-size": "{}pt".format(header_font_size)})
+h3 = Paragraph(text="Multi-Criteria Decision Making (MCDM) Model", width=p_width, style={"font-size": "{}pt".format(header_font_size)})
 
-p4 = Paragraph(text="The MCDM helps you make your final decision regarding which tool you should use. To use this "
-                    "tab follow these instructions:", width=p_width, style={"font-size": "{}pt".format(p_font_size)})
+p4 = Paragraph(text="The MCDM model helps you make your final decision regarding which tool you should use. To use "
+                    "this tab follow these instructions:", width=p_width, style={"font-size": "{}pt".format(p_font_size)})
 
 p5 = Paragraph(text="1) Choose the subset of criteria that are most important to you from the box. Click 'Submit "
                     "Criteria' when you have finished.", width=p_width, style={"font-size": "{}pt".format(p_font_size)})
